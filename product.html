@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Product</title>
+</head>
+
+<body>
+    <header>
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="category.html">Categories</a></li>
+                <li><a href="productlist.html">Product list</a></li>
+                <li><a href="product.html">Product</a></li>
+            </ul>
+        </nav>
+        <a href="index.html" class="logo">SM</a>
+        <nav class="navbar">
+            <a href="category.html">Categories</a>
+            <a href="productlist.html">Product list</a>
+            <a href="product.html">Product</a>
+        </nav>
+    </header>
+    <div class="categories-label">/product</div>
+    <main class="main_productinfo">
+        <div class="product_container">
+            <div class="product_information">
+                <img src="https://kea-alt-del.dk/t7/images/webp/1000/1544.webp" alt="product" class="product_img">
+                <h3 class="product_h3">Basket Bump Sneaker</h3>
+            </div>
+        </div>
+
+        <div class="collected_info">
+            <div class="size_dropdown_container">
+                <!-- label opretter en etiket med teksten "choose size" -->
+                <label for="sizeSelect">Choose size:</label>
+                <!-- jeg giver et id så den kan kaldes på i js -->
+                <!-- on change udløses når der ændres på størrelsen og selectSize kaldes på -->
+                <select id="sizeSelect" class="size-dropdown" onchange="selectSize()">
+                    <!-- option er de muligheder man har at vælge i mellem -->
+                    <!-- value angiver værdien og teksten mellem tagsene er det der vises-->
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                </select>
+            </div>
+
+            <div class="harmonika">
+                <details>
+                    <!-- det der skal klikkes på -->
+                    <summary>About the product</summary>
+                    <!-- indholdet -->
+                    <p>Model name: Basket Bump Sneaker</p>
+                    <p>Season: Fall 2010</p>
+                    <p>Color: White</p>
+                    <p>Inventory number: 1544</p>
+                </details>
+            </div>
+            <div class="shopping_cart">
+                <img src="img/shoppingcart.svg" alt="shoppingcart" class="shoppingcart">
+                <h4>Add to bag</h4>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="script.js"></script>
+    <script src="size.js"></script>
+</body>
+
+</html>

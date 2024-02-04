@@ -1,0 +1,515 @@
+/* fonts */
+@font-face {
+  font-family: "sixtyfour-regular-variablefont";
+  src: url("fonts/sixtyfour-regular-variablefont_bledscan-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+/* styling til hele sitet */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "sixtyfour-regular-variablefont";
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+
+body {
+  min-height: 100vh;
+  background: url(img/background2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* header start */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(30px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+/* header slut */
+
+/* burger menu start */
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  background-color: #fff;
+  height: 3px;
+  width: 25px;
+  margin: 4px 0;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: 999;
+  background: transparent;
+  width: 100%;
+  display: none;
+  text-align: right;
+}
+
+.mobile-menu.show-menu {
+  display: block;
+}
+
+li a {
+  list-style: none;
+  color: antiquewhite;
+}
+li a:hover {
+  filter: contrast(3);
+  color: #fff;
+}
+/* burger menu slut */
+
+/* categories site start */
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.category {
+  position: relative;
+  text-align: center;
+}
+
+.category img {
+  max-width: 40%;
+  display: block;
+  opacity: 0.6;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.category img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.winter_img {
+  margin-left: 69%;
+}
+.spring_img {
+  margin-left: 59%;
+}
+.summer_img {
+  margin-left: 66%;
+}
+.fall_img {
+  margin-left: 52%;
+}
+.category h2 {
+  position: absolute;
+  bottom: 35%;
+  left: 47%;
+  transform: translate(-50%, 50%);
+  font-size: 34px;
+  color: #fff;
+  margin: 0;
+  opacity: 0.8;
+  animation: hopIn 0.5s infinite;
+}
+
+@keyframes hopIn {
+  0%,
+  100% {
+    transform: translate(-50%, 50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, 50%) translateY(-5px);
+  }
+}
+
+.category a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.categories-label {
+  position: fixed;
+  top: 88px;
+  left: 10px;
+  padding: 5px;
+  z-index: 999;
+  color: #fff;
+  font-size: x-small;
+}
+/* categories site slut */
+
+/* product list site start */
+.grid_1-1-1 {
+  margin-top: 120px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+h2 {
+  color: rgba(139, 143, 188, 0.5);
+  font-size: 1.2rem;
+  animation: hopIn 0.9s infinite;
+}
+
+@keyframes hopIn {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+article {
+  position: relative;
+}
+
+article img {
+  display: block;
+}
+
+article h2 {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  margin: 0;
+}
+
+.brand {
+  position: absolute;
+  top: 82%;
+  left: 83%;
+  color: rgba(139, 143, 188, 0.5);
+  font-size: 1rem;
+}
+
+.price {
+  position: absolute;
+  top: 86%;
+  left: 87%;
+  color: rgba(139, 143, 188, 0.5);
+  font-size: 0.5rem;
+}
+.brand_discount {
+  position: absolute;
+  top: 82%;
+  left: 83%;
+  color: #fff;
+  font-size: 1rem;
+}
+.procent {
+  position: absolute;
+  top: 80%;
+  left: 4%;
+  color: #fff;
+  font-size: 1rem;
+  background-color: rgba(139, 143, 188, 0.5);
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  text-align: center;
+}
+.price_discount {
+  position: absolute;
+  top: 86%;
+  left: 87%;
+  color: #fff;
+  font-size: 0.5rem;
+  text-decoration: line-through;
+}
+.discount {
+  color: #fff;
+  font-size: 0.5rem;
+}
+
+.buy_btn {
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #8b8fbc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 10px auto;
+}
+
+.buy_btn:hover {
+  background-color: #6b6f9c;
+  color: #ffffff;
+}
+.grid_1-1-1 article:nth-child(3) img {
+  filter: blur(5px);
+}
+
+.grid_1-1-1 article:nth-child(3)::before {
+  content: "Sold out";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  color: rgba(139, 143, 188, 0.5);
+  z-index: 1;
+  display: flex;
+}
+/* product list site slut */
+
+/* product site start */
+.product_information {
+  padding: 0 20px;
+  flex: 1;
+}
+
+.main_productinfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 5%;
+  padding-bottom: 10%;
+}
+.product_img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: -55%;
+}
+.size-dropdown {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.size_label {
+  position: relative;
+  top: 24%;
+  left: 53%;
+}
+/* harmonika start */
+.harmonika {
+  padding: 12px;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+details {
+  margin-left: 2%;
+  margin-top: 2%;
+  width: fit-content;
+}
+
+/* titlen på harmonikaen */
+summary {
+  background: rgba(139, 143, 188, 0.5);
+  padding: 8px 8px;
+  transition: background 1s;
+  cursor: pointer;
+  border-radius: 4px;
+  position: relative;
+}
+
+summary:hover {
+  background-color: #6b6f9c;
+}
+
+/* baggrunds farve og farve på tekst når harmonikaen er åben */
+details[open] summary {
+  background: rgba(139, 143, 188, 0.5);
+  color: #fff;
+}
+
+/* det åbnede indhold */
+details[open] p {
+  margin-top: 8px;
+}
+/* harmonika slut */
+
+.size_dropdown_container {
+  margin-bottom: 10px;
+  margin-left: 8%;
+  font-size: 1.1rem;
+  color: rgba(139, 143, 188, 0.5);
+}
+.product_h3 {
+  position: absolute;
+  top: 17%;
+  left: 20%;
+}
+.collected_info {
+  margin-left: 30%;
+  margin-top: 30%;
+}
+
+.shopping_cart {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 28%;
+  left: 65%;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 0.3s;
+  animation: hopIn 0.9s infinite;
+  opacity: 0.8;
+}
+
+@keyframes hopIn {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.shoppingcart {
+  margin-right: 10px;
+}
+.shopping_cart:hover {
+  color: #6b6f9c;
+}
+
+/* ------------------ mobil-layout ------------------ */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+    order: 2;
+  }
+  .mobile-menu {
+    top: 80px;
+  }
+  .logo {
+    order: 1;
+  }
+
+  nav {
+    display: none;
+  }
+  /* product list site start */
+  .productlist_main {
+    margin-bottom: -1%;
+    padding: 2%;
+  }
+  .brand {
+    display: none;
+  }
+  .price {
+    display: none;
+  }
+
+  .brand_discount {
+    display: none;
+  }
+  .price_discount {
+    display: none;
+  }
+  .procent {
+    top: 78%;
+    left: 40%;
+    border-radius: 5px;
+    padding: 2px 4px;
+    font-size: 7px;
+  }
+  .buy_btn {
+    padding: 4px 6px;
+    font-size: 10px;
+    margin-left: 15%;
+    margin-top: 5%;
+  }
+  h2 {
+    font-size: 0.9rem;
+  }
+  /* product list site slut */
+  .category img {
+    display: none;
+  }
+  .categories {
+    grid-template-columns: 1fr;
+    margin-left: 25%;
+  }
+
+  .category h2 {
+    position: static;
+    transform: none;
+    margin-bottom: 10px;
+  }
+}
+
+/* fjerner burgermenu fra desktop visning */
+@media only screen and (min-width: 601px) {
+  .burger-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+}
