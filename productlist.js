@@ -19,9 +19,12 @@ function showProduct(product) {
   copy.querySelector(".brand").textContent = product.brandname;
   copy.querySelector(".price").textContent = `${product.price},-`;
   //appende
-  document.querySelector("main").appendChild(copy);
+  document.querySelector(".grid_1-1-1").appendChild(copy);
 }
 
 if (product.soldout === 1) {
   copy.querySelector("article").classList.add("soldout");
+}
+if (product.discount === 1) {
+  copy.querySelector("article").classList.add("discount");
 }
