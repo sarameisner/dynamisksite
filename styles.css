@@ -128,21 +128,22 @@ li a:hover {
 /* burger menu slut */
 
 /* categories site start */
-.categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+.categories a {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 30%;
-}
-
-.category h2 {
-  transform: translate(-50%, 50%);
-  font-size: 34px;
-  color: #fff;
-  margin: 0;
+  flex-wrap: wrap;
+  text-decoration: none;
+  color: inherit;
+  text-transform: uppercase;
+  margin: 10px;
   opacity: 0.8;
   animation: hopIn 0.5s infinite;
+  font-size: 2rem;
+}
+
+.categories a:hover {
+  font-weight: bold;
 }
 
 @keyframes hopIn {
@@ -154,12 +155,9 @@ li a:hover {
     transform: translate(-50%, 50%) translateY(-5px);
   }
 }
-
-.category a {
-  text-decoration: none;
-  color: inherit;
+.categories {
+  margin-left: 49%;
 }
-
 .categories-label {
   position: fixed;
   top: 88px;
@@ -190,13 +188,13 @@ article img {
 
 article h2 {
   position: absolute;
-  top: 2%;
-  left: 34%;
-  transform: translate(-50%, -50%);
   text-align: center;
   animation: hopIn 0.9s infinite;
-  color: #eacbb7;
-  font-size: 0.5rem;
+  color: #e29b6f;
+  font-size: 1rem;
+  display: inline;
+  margin-left: 47%;
+  margin-top: -134%;
 }
 
 @keyframes hopIn {
@@ -375,7 +373,7 @@ details[open] p {
 .product_h3 {
   position: absolute;
   top: 12%;
-  left: 33%;
+  left: 31%;
   font-size: 1rem;
   animation: hopIn 0.8s infinite;
 }
