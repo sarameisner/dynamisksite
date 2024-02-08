@@ -140,6 +140,7 @@ li a:hover {
   opacity: 0.8;
   animation: hopIn 0.5s infinite;
   font-size: 2rem;
+  transition: 0.3s;
 }
 
 .categories a:hover {
@@ -193,8 +194,8 @@ article h2 {
   color: #e29b6f;
   font-size: 1rem;
   display: inline;
-  margin-left: 47%;
-  margin-top: -134%;
+  margin-left: 35%;
+  margin-top: -133%;
 }
 
 @keyframes hopIn {
@@ -210,7 +211,7 @@ article h2 {
 .brand {
   position: absolute;
   top: 82%;
-  left: 83%;
+  left: 38%;
   color: #ebc8b2;
   font-size: 1rem;
 }
@@ -223,26 +224,6 @@ article h2 {
   font-size: 0.5rem;
 }
 
-.procent {
-  position: absolute;
-  top: 80%;
-  left: 4%;
-  color: #fff;
-  font-size: 1rem;
-  background-color: #edd1bf;
-  border-radius: 5px;
-  padding: 8px 12px;
-  font-size: 16px;
-  text-align: center;
-}
-.price_discount {
-  position: absolute;
-  top: 86%;
-  left: 87%;
-  color: #fff;
-  font-size: 0.5rem;
-  text-decoration: line-through;
-}
 .discount {
   color: #fff;
   font-size: 0.5rem;
@@ -276,6 +257,7 @@ article h2 {
   background-color: #edd1bf;
   color: #ffffff;
 }
+
 .grid_1-1-1 article.soldout img {
   filter: blur(5px);
 }
@@ -406,6 +388,7 @@ details[open] p {
 
 .shoppingcart {
   margin-right: 10px;
+  width: 40px;
 }
 .shopping_cart:hover {
   color: #edd1bf;
